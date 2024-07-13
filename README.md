@@ -1,16 +1,13 @@
-# app
+# Live Demo:
+- [APK file](https://drive.google.com/file/d/1RZ-98IEJ8gOnj8RrrsgGmE4xKJZ1udYD/view?usp=sharing)
+- [Video preview](https://youtu.be/q18DrVq1WX8?si=vwwvNUXnxfT2e7K2)
 
-A new Flutter project.
+# Description of the project: 
+Its a simple flutter app that collects user location on 10 seconds interval. The project is developed following BLoC pattern. 
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Instructions to get the project running locally: 
+- Install [Flutter](https://docs.flutter.dev)
+- Clone the public repository from [GIM](https://github.com/nasirdev74/GIM)
+- Setup Dart SDK
+- create a prod.env file 
+- run the main.dart file
