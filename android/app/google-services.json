@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "990834044592",
+    "project_id": "fluttertestapp-54048",
+    "storage_bucket": "fluttertestapp-54048.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990834044592:android:815071835d0cef8b3f9575",
+        "android_client_info": {
+          "package_name": "com.gim.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeirLKKjFlFUpCn4ieV-lc9sN4z0XrluU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
