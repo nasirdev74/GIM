@@ -18,6 +18,7 @@ class BuildLocations extends StatelessWidget {
       child: BlocBuilder<LocationsBloc, LocationsState>(
         builder: (_, state) {
           final positions = state.positions;
+          if (positions.isEmpty) return _buildEmptyText();
           return ListView.separated(
             itemCount: positions.length,
             physics: const ClampingScrollPhysics(),
@@ -29,6 +30,19 @@ class BuildLocations extends StatelessWidget {
             },
           );
         },
+      ),
+    );
+  }
+
+  Widget _buildEmptyText() {
+    return Center(
+      child: Text(
+        "Empty",
+        style: TextStyle(
+          fontSize: 32,
+          fontWeight: FontWeight.w500,
+          color: Colors.grey.shade300,
+        ),
       ),
     );
   }
