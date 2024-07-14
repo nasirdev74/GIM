@@ -20,27 +20,30 @@ mixin _$LocationsEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() startCollection,
     required TResult Function() stopCollection,
-    required TResult Function() collectLocation,
+    required TResult Function(LocationData location) addNewLocationData,
     required TResult Function() refreshCollection,
     required TResult Function(int id) deleteCollection,
+    required TResult Function() clearAll,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? startCollection,
     TResult? Function()? stopCollection,
-    TResult? Function()? collectLocation,
+    TResult? Function(LocationData location)? addNewLocationData,
     TResult? Function()? refreshCollection,
     TResult? Function(int id)? deleteCollection,
+    TResult? Function()? clearAll,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? startCollection,
     TResult Function()? stopCollection,
-    TResult Function()? collectLocation,
+    TResult Function(LocationData location)? addNewLocationData,
     TResult Function()? refreshCollection,
     TResult Function(int id)? deleteCollection,
+    TResult Function()? clearAll,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -48,27 +51,30 @@ mixin _$LocationsEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_StartCollection value) startCollection,
     required TResult Function(_StopCollection value) stopCollection,
-    required TResult Function(_CollectLocation value) collectLocation,
+    required TResult Function(_AddNewLocationData value) addNewLocationData,
     required TResult Function(_RefreshCollection value) refreshCollection,
     required TResult Function(_DeleteCollection value) deleteCollection,
+    required TResult Function(_ClearAll value) clearAll,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_StartCollection value)? startCollection,
     TResult? Function(_StopCollection value)? stopCollection,
-    TResult? Function(_CollectLocation value)? collectLocation,
+    TResult? Function(_AddNewLocationData value)? addNewLocationData,
     TResult? Function(_RefreshCollection value)? refreshCollection,
     TResult? Function(_DeleteCollection value)? deleteCollection,
+    TResult? Function(_ClearAll value)? clearAll,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_StartCollection value)? startCollection,
     TResult Function(_StopCollection value)? stopCollection,
-    TResult Function(_CollectLocation value)? collectLocation,
+    TResult Function(_AddNewLocationData value)? addNewLocationData,
     TResult Function(_RefreshCollection value)? refreshCollection,
     TResult Function(_DeleteCollection value)? deleteCollection,
+    TResult Function(_ClearAll value)? clearAll,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -132,9 +138,10 @@ class _$StartCollectionImpl implements _StartCollection {
   TResult when<TResult extends Object?>({
     required TResult Function() startCollection,
     required TResult Function() stopCollection,
-    required TResult Function() collectLocation,
+    required TResult Function(LocationData location) addNewLocationData,
     required TResult Function() refreshCollection,
     required TResult Function(int id) deleteCollection,
+    required TResult Function() clearAll,
   }) {
     return startCollection();
   }
@@ -144,9 +151,10 @@ class _$StartCollectionImpl implements _StartCollection {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? startCollection,
     TResult? Function()? stopCollection,
-    TResult? Function()? collectLocation,
+    TResult? Function(LocationData location)? addNewLocationData,
     TResult? Function()? refreshCollection,
     TResult? Function(int id)? deleteCollection,
+    TResult? Function()? clearAll,
   }) {
     return startCollection?.call();
   }
@@ -156,9 +164,10 @@ class _$StartCollectionImpl implements _StartCollection {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? startCollection,
     TResult Function()? stopCollection,
-    TResult Function()? collectLocation,
+    TResult Function(LocationData location)? addNewLocationData,
     TResult Function()? refreshCollection,
     TResult Function(int id)? deleteCollection,
+    TResult Function()? clearAll,
     required TResult orElse(),
   }) {
     if (startCollection != null) {
@@ -172,9 +181,10 @@ class _$StartCollectionImpl implements _StartCollection {
   TResult map<TResult extends Object?>({
     required TResult Function(_StartCollection value) startCollection,
     required TResult Function(_StopCollection value) stopCollection,
-    required TResult Function(_CollectLocation value) collectLocation,
+    required TResult Function(_AddNewLocationData value) addNewLocationData,
     required TResult Function(_RefreshCollection value) refreshCollection,
     required TResult Function(_DeleteCollection value) deleteCollection,
+    required TResult Function(_ClearAll value) clearAll,
   }) {
     return startCollection(this);
   }
@@ -184,9 +194,10 @@ class _$StartCollectionImpl implements _StartCollection {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_StartCollection value)? startCollection,
     TResult? Function(_StopCollection value)? stopCollection,
-    TResult? Function(_CollectLocation value)? collectLocation,
+    TResult? Function(_AddNewLocationData value)? addNewLocationData,
     TResult? Function(_RefreshCollection value)? refreshCollection,
     TResult? Function(_DeleteCollection value)? deleteCollection,
+    TResult? Function(_ClearAll value)? clearAll,
   }) {
     return startCollection?.call(this);
   }
@@ -196,9 +207,10 @@ class _$StartCollectionImpl implements _StartCollection {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_StartCollection value)? startCollection,
     TResult Function(_StopCollection value)? stopCollection,
-    TResult Function(_CollectLocation value)? collectLocation,
+    TResult Function(_AddNewLocationData value)? addNewLocationData,
     TResult Function(_RefreshCollection value)? refreshCollection,
     TResult Function(_DeleteCollection value)? deleteCollection,
+    TResult Function(_ClearAll value)? clearAll,
     required TResult orElse(),
   }) {
     if (startCollection != null) {
@@ -252,9 +264,10 @@ class _$StopCollectionImpl implements _StopCollection {
   TResult when<TResult extends Object?>({
     required TResult Function() startCollection,
     required TResult Function() stopCollection,
-    required TResult Function() collectLocation,
+    required TResult Function(LocationData location) addNewLocationData,
     required TResult Function() refreshCollection,
     required TResult Function(int id) deleteCollection,
+    required TResult Function() clearAll,
   }) {
     return stopCollection();
   }
@@ -264,9 +277,10 @@ class _$StopCollectionImpl implements _StopCollection {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? startCollection,
     TResult? Function()? stopCollection,
-    TResult? Function()? collectLocation,
+    TResult? Function(LocationData location)? addNewLocationData,
     TResult? Function()? refreshCollection,
     TResult? Function(int id)? deleteCollection,
+    TResult? Function()? clearAll,
   }) {
     return stopCollection?.call();
   }
@@ -276,9 +290,10 @@ class _$StopCollectionImpl implements _StopCollection {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? startCollection,
     TResult Function()? stopCollection,
-    TResult Function()? collectLocation,
+    TResult Function(LocationData location)? addNewLocationData,
     TResult Function()? refreshCollection,
     TResult Function(int id)? deleteCollection,
+    TResult Function()? clearAll,
     required TResult orElse(),
   }) {
     if (stopCollection != null) {
@@ -292,9 +307,10 @@ class _$StopCollectionImpl implements _StopCollection {
   TResult map<TResult extends Object?>({
     required TResult Function(_StartCollection value) startCollection,
     required TResult Function(_StopCollection value) stopCollection,
-    required TResult Function(_CollectLocation value) collectLocation,
+    required TResult Function(_AddNewLocationData value) addNewLocationData,
     required TResult Function(_RefreshCollection value) refreshCollection,
     required TResult Function(_DeleteCollection value) deleteCollection,
+    required TResult Function(_ClearAll value) clearAll,
   }) {
     return stopCollection(this);
   }
@@ -304,9 +320,10 @@ class _$StopCollectionImpl implements _StopCollection {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_StartCollection value)? startCollection,
     TResult? Function(_StopCollection value)? stopCollection,
-    TResult? Function(_CollectLocation value)? collectLocation,
+    TResult? Function(_AddNewLocationData value)? addNewLocationData,
     TResult? Function(_RefreshCollection value)? refreshCollection,
     TResult? Function(_DeleteCollection value)? deleteCollection,
+    TResult? Function(_ClearAll value)? clearAll,
   }) {
     return stopCollection?.call(this);
   }
@@ -316,9 +333,10 @@ class _$StopCollectionImpl implements _StopCollection {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_StartCollection value)? startCollection,
     TResult Function(_StopCollection value)? stopCollection,
-    TResult Function(_CollectLocation value)? collectLocation,
+    TResult Function(_AddNewLocationData value)? addNewLocationData,
     TResult Function(_RefreshCollection value)? refreshCollection,
     TResult Function(_DeleteCollection value)? deleteCollection,
+    TResult Function(_ClearAll value)? clearAll,
     required TResult orElse(),
   }) {
     if (stopCollection != null) {
@@ -333,50 +351,79 @@ abstract class _StopCollection implements LocationsEvent {
 }
 
 /// @nodoc
-abstract class _$$CollectLocationImplCopyWith<$Res> {
-  factory _$$CollectLocationImplCopyWith(_$CollectLocationImpl value,
-          $Res Function(_$CollectLocationImpl) then) =
-      __$$CollectLocationImplCopyWithImpl<$Res>;
+abstract class _$$AddNewLocationDataImplCopyWith<$Res> {
+  factory _$$AddNewLocationDataImplCopyWith(_$AddNewLocationDataImpl value,
+          $Res Function(_$AddNewLocationDataImpl) then) =
+      __$$AddNewLocationDataImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({LocationData location});
 }
 
 /// @nodoc
-class __$$CollectLocationImplCopyWithImpl<$Res>
-    extends _$LocationsEventCopyWithImpl<$Res, _$CollectLocationImpl>
-    implements _$$CollectLocationImplCopyWith<$Res> {
-  __$$CollectLocationImplCopyWithImpl(
-      _$CollectLocationImpl _value, $Res Function(_$CollectLocationImpl) _then)
+class __$$AddNewLocationDataImplCopyWithImpl<$Res>
+    extends _$LocationsEventCopyWithImpl<$Res, _$AddNewLocationDataImpl>
+    implements _$$AddNewLocationDataImplCopyWith<$Res> {
+  __$$AddNewLocationDataImplCopyWithImpl(_$AddNewLocationDataImpl _value,
+      $Res Function(_$AddNewLocationDataImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? location = null,
+  }) {
+    return _then(_$AddNewLocationDataImpl(
+      location: null == location
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as LocationData,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$CollectLocationImpl implements _CollectLocation {
-  const _$CollectLocationImpl();
+class _$AddNewLocationDataImpl implements _AddNewLocationData {
+  const _$AddNewLocationDataImpl({required this.location});
+
+  @override
+  final LocationData location;
 
   @override
   String toString() {
-    return 'LocationsEvent.collectLocation()';
+    return 'LocationsEvent.addNewLocationData(location: $location)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$CollectLocationImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$AddNewLocationDataImpl &&
+            (identical(other.location, location) ||
+                other.location == location));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, location);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddNewLocationDataImplCopyWith<_$AddNewLocationDataImpl> get copyWith =>
+      __$$AddNewLocationDataImplCopyWithImpl<_$AddNewLocationDataImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() startCollection,
     required TResult Function() stopCollection,
-    required TResult Function() collectLocation,
+    required TResult Function(LocationData location) addNewLocationData,
     required TResult Function() refreshCollection,
     required TResult Function(int id) deleteCollection,
+    required TResult Function() clearAll,
   }) {
-    return collectLocation();
+    return addNewLocationData(location);
   }
 
   @override
@@ -384,11 +431,12 @@ class _$CollectLocationImpl implements _CollectLocation {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? startCollection,
     TResult? Function()? stopCollection,
-    TResult? Function()? collectLocation,
+    TResult? Function(LocationData location)? addNewLocationData,
     TResult? Function()? refreshCollection,
     TResult? Function(int id)? deleteCollection,
+    TResult? Function()? clearAll,
   }) {
-    return collectLocation?.call();
+    return addNewLocationData?.call(location);
   }
 
   @override
@@ -396,13 +444,14 @@ class _$CollectLocationImpl implements _CollectLocation {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? startCollection,
     TResult Function()? stopCollection,
-    TResult Function()? collectLocation,
+    TResult Function(LocationData location)? addNewLocationData,
     TResult Function()? refreshCollection,
     TResult Function(int id)? deleteCollection,
+    TResult Function()? clearAll,
     required TResult orElse(),
   }) {
-    if (collectLocation != null) {
-      return collectLocation();
+    if (addNewLocationData != null) {
+      return addNewLocationData(location);
     }
     return orElse();
   }
@@ -412,11 +461,12 @@ class _$CollectLocationImpl implements _CollectLocation {
   TResult map<TResult extends Object?>({
     required TResult Function(_StartCollection value) startCollection,
     required TResult Function(_StopCollection value) stopCollection,
-    required TResult Function(_CollectLocation value) collectLocation,
+    required TResult Function(_AddNewLocationData value) addNewLocationData,
     required TResult Function(_RefreshCollection value) refreshCollection,
     required TResult Function(_DeleteCollection value) deleteCollection,
+    required TResult Function(_ClearAll value) clearAll,
   }) {
-    return collectLocation(this);
+    return addNewLocationData(this);
   }
 
   @override
@@ -424,11 +474,12 @@ class _$CollectLocationImpl implements _CollectLocation {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_StartCollection value)? startCollection,
     TResult? Function(_StopCollection value)? stopCollection,
-    TResult? Function(_CollectLocation value)? collectLocation,
+    TResult? Function(_AddNewLocationData value)? addNewLocationData,
     TResult? Function(_RefreshCollection value)? refreshCollection,
     TResult? Function(_DeleteCollection value)? deleteCollection,
+    TResult? Function(_ClearAll value)? clearAll,
   }) {
-    return collectLocation?.call(this);
+    return addNewLocationData?.call(this);
   }
 
   @override
@@ -436,20 +487,27 @@ class _$CollectLocationImpl implements _CollectLocation {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_StartCollection value)? startCollection,
     TResult Function(_StopCollection value)? stopCollection,
-    TResult Function(_CollectLocation value)? collectLocation,
+    TResult Function(_AddNewLocationData value)? addNewLocationData,
     TResult Function(_RefreshCollection value)? refreshCollection,
     TResult Function(_DeleteCollection value)? deleteCollection,
+    TResult Function(_ClearAll value)? clearAll,
     required TResult orElse(),
   }) {
-    if (collectLocation != null) {
-      return collectLocation(this);
+    if (addNewLocationData != null) {
+      return addNewLocationData(this);
     }
     return orElse();
   }
 }
 
-abstract class _CollectLocation implements LocationsEvent {
-  const factory _CollectLocation() = _$CollectLocationImpl;
+abstract class _AddNewLocationData implements LocationsEvent {
+  const factory _AddNewLocationData({required final LocationData location}) =
+      _$AddNewLocationDataImpl;
+
+  LocationData get location;
+  @JsonKey(ignore: true)
+  _$$AddNewLocationDataImplCopyWith<_$AddNewLocationDataImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -492,9 +550,10 @@ class _$RefreshCollectionImpl implements _RefreshCollection {
   TResult when<TResult extends Object?>({
     required TResult Function() startCollection,
     required TResult Function() stopCollection,
-    required TResult Function() collectLocation,
+    required TResult Function(LocationData location) addNewLocationData,
     required TResult Function() refreshCollection,
     required TResult Function(int id) deleteCollection,
+    required TResult Function() clearAll,
   }) {
     return refreshCollection();
   }
@@ -504,9 +563,10 @@ class _$RefreshCollectionImpl implements _RefreshCollection {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? startCollection,
     TResult? Function()? stopCollection,
-    TResult? Function()? collectLocation,
+    TResult? Function(LocationData location)? addNewLocationData,
     TResult? Function()? refreshCollection,
     TResult? Function(int id)? deleteCollection,
+    TResult? Function()? clearAll,
   }) {
     return refreshCollection?.call();
   }
@@ -516,9 +576,10 @@ class _$RefreshCollectionImpl implements _RefreshCollection {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? startCollection,
     TResult Function()? stopCollection,
-    TResult Function()? collectLocation,
+    TResult Function(LocationData location)? addNewLocationData,
     TResult Function()? refreshCollection,
     TResult Function(int id)? deleteCollection,
+    TResult Function()? clearAll,
     required TResult orElse(),
   }) {
     if (refreshCollection != null) {
@@ -532,9 +593,10 @@ class _$RefreshCollectionImpl implements _RefreshCollection {
   TResult map<TResult extends Object?>({
     required TResult Function(_StartCollection value) startCollection,
     required TResult Function(_StopCollection value) stopCollection,
-    required TResult Function(_CollectLocation value) collectLocation,
+    required TResult Function(_AddNewLocationData value) addNewLocationData,
     required TResult Function(_RefreshCollection value) refreshCollection,
     required TResult Function(_DeleteCollection value) deleteCollection,
+    required TResult Function(_ClearAll value) clearAll,
   }) {
     return refreshCollection(this);
   }
@@ -544,9 +606,10 @@ class _$RefreshCollectionImpl implements _RefreshCollection {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_StartCollection value)? startCollection,
     TResult? Function(_StopCollection value)? stopCollection,
-    TResult? Function(_CollectLocation value)? collectLocation,
+    TResult? Function(_AddNewLocationData value)? addNewLocationData,
     TResult? Function(_RefreshCollection value)? refreshCollection,
     TResult? Function(_DeleteCollection value)? deleteCollection,
+    TResult? Function(_ClearAll value)? clearAll,
   }) {
     return refreshCollection?.call(this);
   }
@@ -556,9 +619,10 @@ class _$RefreshCollectionImpl implements _RefreshCollection {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_StartCollection value)? startCollection,
     TResult Function(_StopCollection value)? stopCollection,
-    TResult Function(_CollectLocation value)? collectLocation,
+    TResult Function(_AddNewLocationData value)? addNewLocationData,
     TResult Function(_RefreshCollection value)? refreshCollection,
     TResult Function(_DeleteCollection value)? deleteCollection,
+    TResult Function(_ClearAll value)? clearAll,
     required TResult orElse(),
   }) {
     if (refreshCollection != null) {
@@ -639,9 +703,10 @@ class _$DeleteCollectionImpl implements _DeleteCollection {
   TResult when<TResult extends Object?>({
     required TResult Function() startCollection,
     required TResult Function() stopCollection,
-    required TResult Function() collectLocation,
+    required TResult Function(LocationData location) addNewLocationData,
     required TResult Function() refreshCollection,
     required TResult Function(int id) deleteCollection,
+    required TResult Function() clearAll,
   }) {
     return deleteCollection(id);
   }
@@ -651,9 +716,10 @@ class _$DeleteCollectionImpl implements _DeleteCollection {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? startCollection,
     TResult? Function()? stopCollection,
-    TResult? Function()? collectLocation,
+    TResult? Function(LocationData location)? addNewLocationData,
     TResult? Function()? refreshCollection,
     TResult? Function(int id)? deleteCollection,
+    TResult? Function()? clearAll,
   }) {
     return deleteCollection?.call(id);
   }
@@ -663,9 +729,10 @@ class _$DeleteCollectionImpl implements _DeleteCollection {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? startCollection,
     TResult Function()? stopCollection,
-    TResult Function()? collectLocation,
+    TResult Function(LocationData location)? addNewLocationData,
     TResult Function()? refreshCollection,
     TResult Function(int id)? deleteCollection,
+    TResult Function()? clearAll,
     required TResult orElse(),
   }) {
     if (deleteCollection != null) {
@@ -679,9 +746,10 @@ class _$DeleteCollectionImpl implements _DeleteCollection {
   TResult map<TResult extends Object?>({
     required TResult Function(_StartCollection value) startCollection,
     required TResult Function(_StopCollection value) stopCollection,
-    required TResult Function(_CollectLocation value) collectLocation,
+    required TResult Function(_AddNewLocationData value) addNewLocationData,
     required TResult Function(_RefreshCollection value) refreshCollection,
     required TResult Function(_DeleteCollection value) deleteCollection,
+    required TResult Function(_ClearAll value) clearAll,
   }) {
     return deleteCollection(this);
   }
@@ -691,9 +759,10 @@ class _$DeleteCollectionImpl implements _DeleteCollection {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_StartCollection value)? startCollection,
     TResult? Function(_StopCollection value)? stopCollection,
-    TResult? Function(_CollectLocation value)? collectLocation,
+    TResult? Function(_AddNewLocationData value)? addNewLocationData,
     TResult? Function(_RefreshCollection value)? refreshCollection,
     TResult? Function(_DeleteCollection value)? deleteCollection,
+    TResult? Function(_ClearAll value)? clearAll,
   }) {
     return deleteCollection?.call(this);
   }
@@ -703,9 +772,10 @@ class _$DeleteCollectionImpl implements _DeleteCollection {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_StartCollection value)? startCollection,
     TResult Function(_StopCollection value)? stopCollection,
-    TResult Function(_CollectLocation value)? collectLocation,
+    TResult Function(_AddNewLocationData value)? addNewLocationData,
     TResult Function(_RefreshCollection value)? refreshCollection,
     TResult Function(_DeleteCollection value)? deleteCollection,
+    TResult Function(_ClearAll value)? clearAll,
     required TResult orElse(),
   }) {
     if (deleteCollection != null) {
@@ -726,9 +796,134 @@ abstract class _DeleteCollection implements LocationsEvent {
 }
 
 /// @nodoc
+abstract class _$$ClearAllImplCopyWith<$Res> {
+  factory _$$ClearAllImplCopyWith(
+          _$ClearAllImpl value, $Res Function(_$ClearAllImpl) then) =
+      __$$ClearAllImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ClearAllImplCopyWithImpl<$Res>
+    extends _$LocationsEventCopyWithImpl<$Res, _$ClearAllImpl>
+    implements _$$ClearAllImplCopyWith<$Res> {
+  __$$ClearAllImplCopyWithImpl(
+      _$ClearAllImpl _value, $Res Function(_$ClearAllImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ClearAllImpl implements _ClearAll {
+  const _$ClearAllImpl();
+
+  @override
+  String toString() {
+    return 'LocationsEvent.clearAll()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ClearAllImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() startCollection,
+    required TResult Function() stopCollection,
+    required TResult Function(LocationData location) addNewLocationData,
+    required TResult Function() refreshCollection,
+    required TResult Function(int id) deleteCollection,
+    required TResult Function() clearAll,
+  }) {
+    return clearAll();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? startCollection,
+    TResult? Function()? stopCollection,
+    TResult? Function(LocationData location)? addNewLocationData,
+    TResult? Function()? refreshCollection,
+    TResult? Function(int id)? deleteCollection,
+    TResult? Function()? clearAll,
+  }) {
+    return clearAll?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? startCollection,
+    TResult Function()? stopCollection,
+    TResult Function(LocationData location)? addNewLocationData,
+    TResult Function()? refreshCollection,
+    TResult Function(int id)? deleteCollection,
+    TResult Function()? clearAll,
+    required TResult orElse(),
+  }) {
+    if (clearAll != null) {
+      return clearAll();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_StartCollection value) startCollection,
+    required TResult Function(_StopCollection value) stopCollection,
+    required TResult Function(_AddNewLocationData value) addNewLocationData,
+    required TResult Function(_RefreshCollection value) refreshCollection,
+    required TResult Function(_DeleteCollection value) deleteCollection,
+    required TResult Function(_ClearAll value) clearAll,
+  }) {
+    return clearAll(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_StartCollection value)? startCollection,
+    TResult? Function(_StopCollection value)? stopCollection,
+    TResult? Function(_AddNewLocationData value)? addNewLocationData,
+    TResult? Function(_RefreshCollection value)? refreshCollection,
+    TResult? Function(_DeleteCollection value)? deleteCollection,
+    TResult? Function(_ClearAll value)? clearAll,
+  }) {
+    return clearAll?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_StartCollection value)? startCollection,
+    TResult Function(_StopCollection value)? stopCollection,
+    TResult Function(_AddNewLocationData value)? addNewLocationData,
+    TResult Function(_RefreshCollection value)? refreshCollection,
+    TResult Function(_DeleteCollection value)? deleteCollection,
+    TResult Function(_ClearAll value)? clearAll,
+    required TResult orElse(),
+  }) {
+    if (clearAll != null) {
+      return clearAll(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ClearAll implements LocationsEvent {
+  const factory _ClearAll() = _$ClearAllImpl;
+}
+
+/// @nodoc
 mixin _$LocationsState {
-  bool get periodicCollectionRunning => throw _privateConstructorUsedError;
-  List<DBPosition> get positions => throw _privateConstructorUsedError;
+  List<LocationData> get locations => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $LocationsStateCopyWith<LocationsState> get copyWith =>
@@ -741,7 +936,7 @@ abstract class $LocationsStateCopyWith<$Res> {
           LocationsState value, $Res Function(LocationsState) then) =
       _$LocationsStateCopyWithImpl<$Res, LocationsState>;
   @useResult
-  $Res call({bool periodicCollectionRunning, List<DBPosition> positions});
+  $Res call({List<LocationData> locations});
 }
 
 /// @nodoc
@@ -757,18 +952,13 @@ class _$LocationsStateCopyWithImpl<$Res, $Val extends LocationsState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? periodicCollectionRunning = null,
-    Object? positions = null,
+    Object? locations = null,
   }) {
     return _then(_value.copyWith(
-      periodicCollectionRunning: null == periodicCollectionRunning
-          ? _value.periodicCollectionRunning
-          : periodicCollectionRunning // ignore: cast_nullable_to_non_nullable
-              as bool,
-      positions: null == positions
-          ? _value.positions
-          : positions // ignore: cast_nullable_to_non_nullable
-              as List<DBPosition>,
+      locations: null == locations
+          ? _value.locations
+          : locations // ignore: cast_nullable_to_non_nullable
+              as List<LocationData>,
     ) as $Val);
   }
 }
@@ -781,7 +971,7 @@ abstract class _$$LocationsStateImplCopyWith<$Res>
       __$$LocationsStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool periodicCollectionRunning, List<DBPosition> positions});
+  $Res call({List<LocationData> locations});
 }
 
 /// @nodoc
@@ -795,18 +985,13 @@ class __$$LocationsStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? periodicCollectionRunning = null,
-    Object? positions = null,
+    Object? locations = null,
   }) {
     return _then(_$LocationsStateImpl(
-      periodicCollectionRunning: null == periodicCollectionRunning
-          ? _value.periodicCollectionRunning
-          : periodicCollectionRunning // ignore: cast_nullable_to_non_nullable
-              as bool,
-      positions: null == positions
-          ? _value._positions
-          : positions // ignore: cast_nullable_to_non_nullable
-              as List<DBPosition>,
+      locations: null == locations
+          ? _value._locations
+          : locations // ignore: cast_nullable_to_non_nullable
+              as List<LocationData>,
     ));
   }
 }
@@ -815,25 +1000,21 @@ class __$$LocationsStateImplCopyWithImpl<$Res>
 
 class _$LocationsStateImpl implements _LocationsState {
   const _$LocationsStateImpl(
-      {this.periodicCollectionRunning = false,
-      final List<DBPosition> positions = const <DBPosition>[]})
-      : _positions = positions;
+      {final List<LocationData> locations = const <LocationData>[]})
+      : _locations = locations;
 
+  final List<LocationData> _locations;
   @override
   @JsonKey()
-  final bool periodicCollectionRunning;
-  final List<DBPosition> _positions;
-  @override
-  @JsonKey()
-  List<DBPosition> get positions {
-    if (_positions is EqualUnmodifiableListView) return _positions;
+  List<LocationData> get locations {
+    if (_locations is EqualUnmodifiableListView) return _locations;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_positions);
+    return EqualUnmodifiableListView(_locations);
   }
 
   @override
   String toString() {
-    return 'LocationsState(periodicCollectionRunning: $periodicCollectionRunning, positions: $positions)';
+    return 'LocationsState(locations: $locations)';
   }
 
   @override
@@ -841,16 +1022,13 @@ class _$LocationsStateImpl implements _LocationsState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LocationsStateImpl &&
-            (identical(other.periodicCollectionRunning,
-                    periodicCollectionRunning) ||
-                other.periodicCollectionRunning == periodicCollectionRunning) &&
             const DeepCollectionEquality()
-                .equals(other._positions, _positions));
+                .equals(other._locations, _locations));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, periodicCollectionRunning,
-      const DeepCollectionEquality().hash(_positions));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_locations));
 
   @JsonKey(ignore: true)
   @override
@@ -861,14 +1039,11 @@ class _$LocationsStateImpl implements _LocationsState {
 }
 
 abstract class _LocationsState implements LocationsState {
-  const factory _LocationsState(
-      {final bool periodicCollectionRunning,
-      final List<DBPosition> positions}) = _$LocationsStateImpl;
+  const factory _LocationsState({final List<LocationData> locations}) =
+      _$LocationsStateImpl;
 
   @override
-  bool get periodicCollectionRunning;
-  @override
-  List<DBPosition> get positions;
+  List<LocationData> get locations;
   @override
   @JsonKey(ignore: true)
   _$$LocationsStateImplCopyWith<_$LocationsStateImpl> get copyWith =>

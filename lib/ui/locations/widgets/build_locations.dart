@@ -17,16 +17,20 @@ class BuildLocations extends StatelessWidget {
       },
       child: BlocBuilder<LocationsBloc, LocationsState>(
         builder: (_, state) {
-          final positions = state.positions;
-          if (positions.isEmpty) return _buildEmptyText();
+          final locations = state.locations;
+          if (locations.isEmpty) return _buildEmptyText();
           return ListView.separated(
-            itemCount: positions.length,
+            itemCount: locations.length,
             physics: const ClampingScrollPhysics(),
-            padding: const EdgeInsets.only(bottom: 200),
+            padding: EdgeInsets.only(bottom: MediaQuery.of(context).size.height),
             separatorBuilder: (_, __) => const Divider(height: 1),
             itemBuilder: (ctx, index) {
-              final position = positions[index];
-              return BuildLocation(position: position);
+              final location = locations[index];
+              return BuildLocation(
+                index: index,
+                key: ValueKey(index),
+                locationData: location,
+              );
             },
           );
         },

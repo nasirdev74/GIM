@@ -6,8 +6,7 @@ class PrimaryButton extends StatelessWidget {
     required this.label,
     required this.onTap,
     this.enabled,
-    this.height = 44,
-    this.width = 330,
+    this.height = 40,
     this.inactiveColor,
     this.loading = false,
     this.textColor = const Color(0xFFFFFFFF),
@@ -20,7 +19,6 @@ class PrimaryButton extends StatelessWidget {
   final Color highlightColor;
   final Color textColor;
   final double height;
-  final double width;
   final bool loading;
   final Color activeColor;
   final Color? inactiveColor;
@@ -29,7 +27,6 @@ class PrimaryButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: width,
       height: height,
       child: Material(
         color: (loading || !(enabled ?? true)) ? inactiveColor ?? activeColor.withOpacity(0.7) : activeColor,

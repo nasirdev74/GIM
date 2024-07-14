@@ -20,18 +20,24 @@ mixin _$PermissionEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() checkLocationPermission,
     required TResult Function() requestLocationPermission,
+    required TResult Function() checkBatteryOptimizationPermission,
+    required TResult Function() requestBatteryOptimization,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? checkLocationPermission,
     TResult? Function()? requestLocationPermission,
+    TResult? Function()? checkBatteryOptimizationPermission,
+    TResult? Function()? requestBatteryOptimization,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? checkLocationPermission,
     TResult Function()? requestLocationPermission,
+    TResult Function()? checkBatteryOptimizationPermission,
+    TResult Function()? requestBatteryOptimization,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -41,6 +47,10 @@ mixin _$PermissionEvent {
         checkLocationPermission,
     required TResult Function(_RequestLocationPermission value)
         requestLocationPermission,
+    required TResult Function(_CheckBatteryOptimizationPermission value)
+        checkBatteryOptimizationPermission,
+    required TResult Function(_RequestBatteryOptimization value)
+        requestBatteryOptimization,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -48,6 +58,10 @@ mixin _$PermissionEvent {
     TResult? Function(_CheckLocationPermission value)? checkLocationPermission,
     TResult? Function(_RequestLocationPermission value)?
         requestLocationPermission,
+    TResult? Function(_CheckBatteryOptimizationPermission value)?
+        checkBatteryOptimizationPermission,
+    TResult? Function(_RequestBatteryOptimization value)?
+        requestBatteryOptimization,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +69,10 @@ mixin _$PermissionEvent {
     TResult Function(_CheckLocationPermission value)? checkLocationPermission,
     TResult Function(_RequestLocationPermission value)?
         requestLocationPermission,
+    TResult Function(_CheckBatteryOptimizationPermission value)?
+        checkBatteryOptimizationPermission,
+    TResult Function(_RequestBatteryOptimization value)?
+        requestBatteryOptimization,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -121,6 +139,8 @@ class _$CheckLocationPermissionImpl implements _CheckLocationPermission {
   TResult when<TResult extends Object?>({
     required TResult Function() checkLocationPermission,
     required TResult Function() requestLocationPermission,
+    required TResult Function() checkBatteryOptimizationPermission,
+    required TResult Function() requestBatteryOptimization,
   }) {
     return checkLocationPermission();
   }
@@ -130,6 +150,8 @@ class _$CheckLocationPermissionImpl implements _CheckLocationPermission {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? checkLocationPermission,
     TResult? Function()? requestLocationPermission,
+    TResult? Function()? checkBatteryOptimizationPermission,
+    TResult? Function()? requestBatteryOptimization,
   }) {
     return checkLocationPermission?.call();
   }
@@ -139,6 +161,8 @@ class _$CheckLocationPermissionImpl implements _CheckLocationPermission {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? checkLocationPermission,
     TResult Function()? requestLocationPermission,
+    TResult Function()? checkBatteryOptimizationPermission,
+    TResult Function()? requestBatteryOptimization,
     required TResult orElse(),
   }) {
     if (checkLocationPermission != null) {
@@ -154,6 +178,10 @@ class _$CheckLocationPermissionImpl implements _CheckLocationPermission {
         checkLocationPermission,
     required TResult Function(_RequestLocationPermission value)
         requestLocationPermission,
+    required TResult Function(_CheckBatteryOptimizationPermission value)
+        checkBatteryOptimizationPermission,
+    required TResult Function(_RequestBatteryOptimization value)
+        requestBatteryOptimization,
   }) {
     return checkLocationPermission(this);
   }
@@ -164,6 +192,10 @@ class _$CheckLocationPermissionImpl implements _CheckLocationPermission {
     TResult? Function(_CheckLocationPermission value)? checkLocationPermission,
     TResult? Function(_RequestLocationPermission value)?
         requestLocationPermission,
+    TResult? Function(_CheckBatteryOptimizationPermission value)?
+        checkBatteryOptimizationPermission,
+    TResult? Function(_RequestBatteryOptimization value)?
+        requestBatteryOptimization,
   }) {
     return checkLocationPermission?.call(this);
   }
@@ -174,6 +206,10 @@ class _$CheckLocationPermissionImpl implements _CheckLocationPermission {
     TResult Function(_CheckLocationPermission value)? checkLocationPermission,
     TResult Function(_RequestLocationPermission value)?
         requestLocationPermission,
+    TResult Function(_CheckBatteryOptimizationPermission value)?
+        checkBatteryOptimizationPermission,
+    TResult Function(_RequestBatteryOptimization value)?
+        requestBatteryOptimization,
     required TResult orElse(),
   }) {
     if (checkLocationPermission != null) {
@@ -230,6 +266,8 @@ class _$RequestLocationPermissionImpl implements _RequestLocationPermission {
   TResult when<TResult extends Object?>({
     required TResult Function() checkLocationPermission,
     required TResult Function() requestLocationPermission,
+    required TResult Function() checkBatteryOptimizationPermission,
+    required TResult Function() requestBatteryOptimization,
   }) {
     return requestLocationPermission();
   }
@@ -239,6 +277,8 @@ class _$RequestLocationPermissionImpl implements _RequestLocationPermission {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? checkLocationPermission,
     TResult? Function()? requestLocationPermission,
+    TResult? Function()? checkBatteryOptimizationPermission,
+    TResult? Function()? requestBatteryOptimization,
   }) {
     return requestLocationPermission?.call();
   }
@@ -248,6 +288,8 @@ class _$RequestLocationPermissionImpl implements _RequestLocationPermission {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? checkLocationPermission,
     TResult Function()? requestLocationPermission,
+    TResult Function()? checkBatteryOptimizationPermission,
+    TResult Function()? requestBatteryOptimization,
     required TResult orElse(),
   }) {
     if (requestLocationPermission != null) {
@@ -263,6 +305,10 @@ class _$RequestLocationPermissionImpl implements _RequestLocationPermission {
         checkLocationPermission,
     required TResult Function(_RequestLocationPermission value)
         requestLocationPermission,
+    required TResult Function(_CheckBatteryOptimizationPermission value)
+        checkBatteryOptimizationPermission,
+    required TResult Function(_RequestBatteryOptimization value)
+        requestBatteryOptimization,
   }) {
     return requestLocationPermission(this);
   }
@@ -273,6 +319,10 @@ class _$RequestLocationPermissionImpl implements _RequestLocationPermission {
     TResult? Function(_CheckLocationPermission value)? checkLocationPermission,
     TResult? Function(_RequestLocationPermission value)?
         requestLocationPermission,
+    TResult? Function(_CheckBatteryOptimizationPermission value)?
+        checkBatteryOptimizationPermission,
+    TResult? Function(_RequestBatteryOptimization value)?
+        requestBatteryOptimization,
   }) {
     return requestLocationPermission?.call(this);
   }
@@ -283,6 +333,10 @@ class _$RequestLocationPermissionImpl implements _RequestLocationPermission {
     TResult Function(_CheckLocationPermission value)? checkLocationPermission,
     TResult Function(_RequestLocationPermission value)?
         requestLocationPermission,
+    TResult Function(_CheckBatteryOptimizationPermission value)?
+        checkBatteryOptimizationPermission,
+    TResult Function(_RequestBatteryOptimization value)?
+        requestBatteryOptimization,
     required TResult orElse(),
   }) {
     if (requestLocationPermission != null) {
@@ -297,8 +351,268 @@ abstract class _RequestLocationPermission implements PermissionEvent {
 }
 
 /// @nodoc
+abstract class _$$CheckBatteryOptimizationPermissionImplCopyWith<$Res> {
+  factory _$$CheckBatteryOptimizationPermissionImplCopyWith(
+          _$CheckBatteryOptimizationPermissionImpl value,
+          $Res Function(_$CheckBatteryOptimizationPermissionImpl) then) =
+      __$$CheckBatteryOptimizationPermissionImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CheckBatteryOptimizationPermissionImplCopyWithImpl<$Res>
+    extends _$PermissionEventCopyWithImpl<$Res,
+        _$CheckBatteryOptimizationPermissionImpl>
+    implements _$$CheckBatteryOptimizationPermissionImplCopyWith<$Res> {
+  __$$CheckBatteryOptimizationPermissionImplCopyWithImpl(
+      _$CheckBatteryOptimizationPermissionImpl _value,
+      $Res Function(_$CheckBatteryOptimizationPermissionImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CheckBatteryOptimizationPermissionImpl
+    implements _CheckBatteryOptimizationPermission {
+  const _$CheckBatteryOptimizationPermissionImpl();
+
+  @override
+  String toString() {
+    return 'PermissionEvent.checkBatteryOptimizationPermission()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CheckBatteryOptimizationPermissionImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() checkLocationPermission,
+    required TResult Function() requestLocationPermission,
+    required TResult Function() checkBatteryOptimizationPermission,
+    required TResult Function() requestBatteryOptimization,
+  }) {
+    return checkBatteryOptimizationPermission();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? checkLocationPermission,
+    TResult? Function()? requestLocationPermission,
+    TResult? Function()? checkBatteryOptimizationPermission,
+    TResult? Function()? requestBatteryOptimization,
+  }) {
+    return checkBatteryOptimizationPermission?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? checkLocationPermission,
+    TResult Function()? requestLocationPermission,
+    TResult Function()? checkBatteryOptimizationPermission,
+    TResult Function()? requestBatteryOptimization,
+    required TResult orElse(),
+  }) {
+    if (checkBatteryOptimizationPermission != null) {
+      return checkBatteryOptimizationPermission();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CheckLocationPermission value)
+        checkLocationPermission,
+    required TResult Function(_RequestLocationPermission value)
+        requestLocationPermission,
+    required TResult Function(_CheckBatteryOptimizationPermission value)
+        checkBatteryOptimizationPermission,
+    required TResult Function(_RequestBatteryOptimization value)
+        requestBatteryOptimization,
+  }) {
+    return checkBatteryOptimizationPermission(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_CheckLocationPermission value)? checkLocationPermission,
+    TResult? Function(_RequestLocationPermission value)?
+        requestLocationPermission,
+    TResult? Function(_CheckBatteryOptimizationPermission value)?
+        checkBatteryOptimizationPermission,
+    TResult? Function(_RequestBatteryOptimization value)?
+        requestBatteryOptimization,
+  }) {
+    return checkBatteryOptimizationPermission?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CheckLocationPermission value)? checkLocationPermission,
+    TResult Function(_RequestLocationPermission value)?
+        requestLocationPermission,
+    TResult Function(_CheckBatteryOptimizationPermission value)?
+        checkBatteryOptimizationPermission,
+    TResult Function(_RequestBatteryOptimization value)?
+        requestBatteryOptimization,
+    required TResult orElse(),
+  }) {
+    if (checkBatteryOptimizationPermission != null) {
+      return checkBatteryOptimizationPermission(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CheckBatteryOptimizationPermission implements PermissionEvent {
+  const factory _CheckBatteryOptimizationPermission() =
+      _$CheckBatteryOptimizationPermissionImpl;
+}
+
+/// @nodoc
+abstract class _$$RequestBatteryOptimizationImplCopyWith<$Res> {
+  factory _$$RequestBatteryOptimizationImplCopyWith(
+          _$RequestBatteryOptimizationImpl value,
+          $Res Function(_$RequestBatteryOptimizationImpl) then) =
+      __$$RequestBatteryOptimizationImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$RequestBatteryOptimizationImplCopyWithImpl<$Res>
+    extends _$PermissionEventCopyWithImpl<$Res,
+        _$RequestBatteryOptimizationImpl>
+    implements _$$RequestBatteryOptimizationImplCopyWith<$Res> {
+  __$$RequestBatteryOptimizationImplCopyWithImpl(
+      _$RequestBatteryOptimizationImpl _value,
+      $Res Function(_$RequestBatteryOptimizationImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$RequestBatteryOptimizationImpl implements _RequestBatteryOptimization {
+  const _$RequestBatteryOptimizationImpl();
+
+  @override
+  String toString() {
+    return 'PermissionEvent.requestBatteryOptimization()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$RequestBatteryOptimizationImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() checkLocationPermission,
+    required TResult Function() requestLocationPermission,
+    required TResult Function() checkBatteryOptimizationPermission,
+    required TResult Function() requestBatteryOptimization,
+  }) {
+    return requestBatteryOptimization();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? checkLocationPermission,
+    TResult? Function()? requestLocationPermission,
+    TResult? Function()? checkBatteryOptimizationPermission,
+    TResult? Function()? requestBatteryOptimization,
+  }) {
+    return requestBatteryOptimization?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? checkLocationPermission,
+    TResult Function()? requestLocationPermission,
+    TResult Function()? checkBatteryOptimizationPermission,
+    TResult Function()? requestBatteryOptimization,
+    required TResult orElse(),
+  }) {
+    if (requestBatteryOptimization != null) {
+      return requestBatteryOptimization();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CheckLocationPermission value)
+        checkLocationPermission,
+    required TResult Function(_RequestLocationPermission value)
+        requestLocationPermission,
+    required TResult Function(_CheckBatteryOptimizationPermission value)
+        checkBatteryOptimizationPermission,
+    required TResult Function(_RequestBatteryOptimization value)
+        requestBatteryOptimization,
+  }) {
+    return requestBatteryOptimization(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_CheckLocationPermission value)? checkLocationPermission,
+    TResult? Function(_RequestLocationPermission value)?
+        requestLocationPermission,
+    TResult? Function(_CheckBatteryOptimizationPermission value)?
+        checkBatteryOptimizationPermission,
+    TResult? Function(_RequestBatteryOptimization value)?
+        requestBatteryOptimization,
+  }) {
+    return requestBatteryOptimization?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CheckLocationPermission value)? checkLocationPermission,
+    TResult Function(_RequestLocationPermission value)?
+        requestLocationPermission,
+    TResult Function(_CheckBatteryOptimizationPermission value)?
+        checkBatteryOptimizationPermission,
+    TResult Function(_RequestBatteryOptimization value)?
+        requestBatteryOptimization,
+    required TResult orElse(),
+  }) {
+    if (requestBatteryOptimization != null) {
+      return requestBatteryOptimization(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RequestBatteryOptimization implements PermissionEvent {
+  const factory _RequestBatteryOptimization() =
+      _$RequestBatteryOptimizationImpl;
+}
+
+/// @nodoc
 mixin _$PermissionState {
   LocationState get locationState => throw _privateConstructorUsedError;
+  bool get batteryOptimizationGranted => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $PermissionStateCopyWith<PermissionState> get copyWith =>
@@ -311,7 +625,7 @@ abstract class $PermissionStateCopyWith<$Res> {
           PermissionState value, $Res Function(PermissionState) then) =
       _$PermissionStateCopyWithImpl<$Res, PermissionState>;
   @useResult
-  $Res call({LocationState locationState});
+  $Res call({LocationState locationState, bool batteryOptimizationGranted});
 }
 
 /// @nodoc
@@ -328,12 +642,17 @@ class _$PermissionStateCopyWithImpl<$Res, $Val extends PermissionState>
   @override
   $Res call({
     Object? locationState = null,
+    Object? batteryOptimizationGranted = null,
   }) {
     return _then(_value.copyWith(
       locationState: null == locationState
           ? _value.locationState
           : locationState // ignore: cast_nullable_to_non_nullable
               as LocationState,
+      batteryOptimizationGranted: null == batteryOptimizationGranted
+          ? _value.batteryOptimizationGranted
+          : batteryOptimizationGranted // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -346,7 +665,7 @@ abstract class _$$PermissionStateImplCopyWith<$Res>
       __$$PermissionStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({LocationState locationState});
+  $Res call({LocationState locationState, bool batteryOptimizationGranted});
 }
 
 /// @nodoc
@@ -361,12 +680,17 @@ class __$$PermissionStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? locationState = null,
+    Object? batteryOptimizationGranted = null,
   }) {
     return _then(_$PermissionStateImpl(
       locationState: null == locationState
           ? _value.locationState
           : locationState // ignore: cast_nullable_to_non_nullable
               as LocationState,
+      batteryOptimizationGranted: null == batteryOptimizationGranted
+          ? _value.batteryOptimizationGranted
+          : batteryOptimizationGranted // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -375,15 +699,19 @@ class __$$PermissionStateImplCopyWithImpl<$Res>
 
 class _$PermissionStateImpl implements _PermissionState {
   const _$PermissionStateImpl(
-      {this.locationState = LocationState.noPermission});
+      {this.locationState = LocationState.noPermission,
+      this.batteryOptimizationGranted = false});
 
   @override
   @JsonKey()
   final LocationState locationState;
+  @override
+  @JsonKey()
+  final bool batteryOptimizationGranted;
 
   @override
   String toString() {
-    return 'PermissionState(locationState: $locationState)';
+    return 'PermissionState(locationState: $locationState, batteryOptimizationGranted: $batteryOptimizationGranted)';
   }
 
   @override
@@ -392,11 +720,16 @@ class _$PermissionStateImpl implements _PermissionState {
         (other.runtimeType == runtimeType &&
             other is _$PermissionStateImpl &&
             (identical(other.locationState, locationState) ||
-                other.locationState == locationState));
+                other.locationState == locationState) &&
+            (identical(other.batteryOptimizationGranted,
+                    batteryOptimizationGranted) ||
+                other.batteryOptimizationGranted ==
+                    batteryOptimizationGranted));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, locationState);
+  int get hashCode =>
+      Object.hash(runtimeType, locationState, batteryOptimizationGranted);
 
   @JsonKey(ignore: true)
   @override
@@ -407,11 +740,14 @@ class _$PermissionStateImpl implements _PermissionState {
 }
 
 abstract class _PermissionState implements PermissionState {
-  const factory _PermissionState({final LocationState locationState}) =
-      _$PermissionStateImpl;
+  const factory _PermissionState(
+      {final LocationState locationState,
+      final bool batteryOptimizationGranted}) = _$PermissionStateImpl;
 
   @override
   LocationState get locationState;
+  @override
+  bool get batteryOptimizationGranted;
   @override
   @JsonKey(ignore: true)
   _$$PermissionStateImplCopyWith<_$PermissionStateImpl> get copyWith =>

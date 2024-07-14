@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:app/local_database/db_position.dart';
+import 'package:app/models/models.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class LocationView extends StatelessWidget {
-  const LocationView({super.key, required this.position});
+  const LocationView({super.key, required this.locationData});
 
-  final DBPosition position;
+  final LocationData locationData;
 
   static const route = "/location";
 
@@ -14,13 +14,13 @@ class LocationView extends StatelessWidget {
     return Scaffold(
       body: GoogleMap(
         initialCameraPosition: CameraPosition(
-          target: LatLng(position.latitude, position.longitude),
+          target: LatLng(locationData.latitude, locationData.longitude),
           zoom: 14.4746,
         ),
         markers: {
           Marker(
-            markerId: const MarkerId("position"),
-            position: LatLng(position.latitude, position.longitude),
+            markerId: const MarkerId("location"),
+            position: LatLng(locationData.latitude, locationData.longitude),
           ),
         },
       ),

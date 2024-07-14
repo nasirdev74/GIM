@@ -19,38 +19,60 @@ class PermissionsView extends StatelessWidget {
       body: Center(
         child: BlocConsumer<PermissionBloc, PermissionState>(
           listener: (ctx, state) {
-            if (state.locationState == LocationState.permissionGrantedServiceOn) {
+            if (state.locationState == LocationState.permissionGrantedServiceOn && state.batteryOptimizationGranted) {
               context.go(LocationsView.route);
             }
           },
           builder: (_, state) {
-            return Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text("Location permission and service action"),
-                const SizedBox(height: 50),
-                PrimaryButton(
-                  label: () {
-                    switch (state.locationState) {
-                      case LocationState.noPermission:
-                        return "Request Permission";
-                      case LocationState.permissionDeniedForever:
-                        return "Open Settings";
-                      case LocationState.permissionGrantedServiceOff:
-                        return "Enable Service";
-                      case LocationState.permissionGrantedServiceOn:
-                        return "Service Available";
-                    }
-                  }(),
-                  activeColor: Colors.red,
-                  onTap: () => {
-                    getIt<PermissionBloc>().add(
-                      const PermissionEvent.requestLocationPermission(),
-                    ),
-                  },
-                ),
-              ],
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text("Location permission and service action"),
+                  const SizedBox(height: 20),
+                  PrimaryButton(
+                    label: () {
+                      switch (state.locationState) {
+                        case LocationState.noPermission:
+                          return "Request Permission";
+                        case LocationState.permissionDeniedForever:
+                          return "Open Settings";
+                        case LocationState.permissionGrantedServiceOff:
+                          return "Enable Service";
+                        case LocationState.permissionGrantedServiceOn:
+                          return "Service Available";
+                      }
+                    }(),
+                    activeColor: Colors.red,
+                    onTap: () => {
+                      getIt<PermissionBloc>().add(
+                        const PermissionEvent.requestLocationPermission(),
+                      ),
+                    },
+                  ),
+                  const SizedBox(height: 100),
+                  const Text("Battery Optimization action"),
+                  const SizedBox(height: 20),
+                  PrimaryButton(
+                    label: () {
+                      switch (state.batteryOptimizationGranted) {
+                        case true:
+                          return "Granted";
+                        case false:
+                          return "Request Permission";
+                      }
+                    }(),
+                    activeColor: Colors.red,
+                    onTap: () => {
+                      getIt<PermissionBloc>().add(
+                        const PermissionEvent.requestBatteryOptimization(),
+                      ),
+                    },
+                  ),
+                ],
+              ),
             );
           },
         ),

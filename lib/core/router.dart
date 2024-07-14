@@ -1,7 +1,7 @@
 import 'package:app/ui/views.dart';
 import 'package:flutter/material.dart';
+import 'package:app/models/models.dart';
 import 'package:go_router/go_router.dart';
-import 'package:app/local_database/db_position.dart';
 
 final GlobalKey<NavigatorState> _rootNavigator = GlobalKey(debugLabel: 'root');
 final GlobalKey<NavigatorState> _shellNavigator = GlobalKey(debugLabel: 'shell');
@@ -25,7 +25,7 @@ class AppRouter {
         GoRoute(
           path: LocationView.route,
           name: LocationView.route,
-          builder: (_, state) => LocationView(position: state.extra as DBPosition),
+          builder: (_, state) => LocationView(locationData: state.extra as LocationData),
         ),
         GoRoute(
           path: LocationsView.route,

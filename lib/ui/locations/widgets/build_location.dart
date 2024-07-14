@@ -3,102 +3,75 @@ import 'package:app/ui/views.dart';
 import 'package:app/app/blocs.dart';
 import 'package:flutter/material.dart';
 import 'package:app/core/injector.dart';
+import 'package:app/models/models.dart';
 import 'package:go_router/go_router.dart';
-import 'package:app/local_database/db_position.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
 
 class BuildLocation extends StatelessWidget {
-  const BuildLocation({super.key, required this.position});
+  const BuildLocation({super.key, required this.index, required this.locationData});
 
-  final DBPosition position;
+  final int index;
+  final LocationData locationData;
 
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
-      child: Padding(
-        padding: const EdgeInsets.only(top: 20),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 20),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("lat: ${position.latitude.toStringAsFixed(3)}"),
-                      Text("long: ${position.longitude.toStringAsFixed(3)}"),
-                      Text("date: ${DateFormat("dd MMM").format(position.dateTime)}"),
-                    ],
+      color: index.isOdd ? Colors.grey.shade200 : Colors.white,
+      child: InkWell(
+        onTap: () => {},
+        child: Slidable(
+          endActionPane: ActionPane(
+            motion: const ScrollMotion(),
+            children: [
+              SlidableAction(
+                onPressed: (_) => getIt<LocationsBloc>().add(
+                  LocationsEvent.deleteCollection(
+                    id: locationData.id,
                   ),
                 ),
-                const SizedBox(height: 10),
-                Material(
-                  color: Colors.red.shade900,
-                  child: InkWell(
-                    onTap: () => getIt<LocationsBloc>().add(
-                      LocationsEvent.deleteCollection(
-                        id: position.id ?? 0,
-                      ),
-                    ),
-                    child: SizedBox(
-                      height: 45,
-                      width: MediaQuery.of(context).size.width / 2,
-                      child: const Center(
-                        child: Icon(
-                          Icons.delete,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ),
+                backgroundColor: Colors.red.shade600,
+                foregroundColor: Colors.white,
+                icon: Icons.delete,
+              ),
+              SlidableAction(
+                onPressed: (_) => context.pushNamed(
+                  LocationView.route,
+                  extra: locationData,
                 ),
-              ],
+                backgroundColor: Colors.deepPurple,
+                foregroundColor: Colors.white,
+                icon: Icons.location_on,
+              ),
+            ],
+          ),
+          child: SizedBox(
+            width: MediaQuery.of(context).size.width,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 15,
+                vertical: 12,
+              ),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                physics: const NeverScrollableScrollPhysics(),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(locationData.id.toString()),
+                    const SizedBox(width: 10),
+                    Text(locationData.latitude.toString()),
+                    const SizedBox(width: 10),
+                    Text(locationData.longitude.toString()),
+                    const SizedBox(width: 10),
+                    Text(
+                      "at ${DateFormat("hh:mm:ss a").format(DateTime.fromMillisecondsSinceEpoch(locationData.timestamp))}",
+                    ),
+                  ],
+                ),
+              ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 20),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Text("alt: ${position.altitude.toStringAsFixed(3)}"),
-                      Text("accuracy: ${position.accuracy.toInt()}"),
-                      Text("time: ${DateFormat("hh:mm:ss").format(position.dateTime)}"),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 10),
-                Material(
-                  color: Colors.purple,
-                  child: InkWell(
-                    onTap: () => context.pushNamed(
-                      LocationView.route,
-                      extra: position,
-                    ),
-                    child: SizedBox(
-                      height: 45,
-                      width: MediaQuery.of(context).size.width / 2,
-                      child: const Center(
-                        child: Icon(
-                          Icons.location_on,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ],
+          ),
         ),
       ),
     );

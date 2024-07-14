@@ -7,6 +7,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:app/enum/location_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:permission_handler/permission_handler.dart' as pm;
 
 part 'permission_bloc.freezed.dart';
 
@@ -23,6 +24,8 @@ class PermissionBloc extends Bloc<PermissionEvent, PermissionState> {
   PermissionBloc() : super(const PermissionState()) {
     on<_CheckLocationPermission>(_checkLocationPermission);
     on<_RequestLocationPermission>(_requestLocationPermission);
+    on<_RequestBatteryOptimization>(_requestBatteryOptimization);
+    on<_CheckBatteryOptimizationPermission>(_checkBatteryOptimizationPermission);
 
     _locationServiceStatusStreamSubscription ??= GeolocatorPlatform.instance.getServiceStatusStream().listen((_) {
       add(const PermissionEvent.checkLocationPermission());
@@ -65,6 +68,16 @@ class PermissionBloc extends Bloc<PermissionEvent, PermissionState> {
         await Location.instance.requestService();
     }
     await _checkLocationPermission(event, emit);
+  }
+
+  _checkBatteryOptimizationPermission(event, emit) async {
+    final status = await pm.Permission.ignoreBatteryOptimizations.status;
+    emit(state.copyWith(batteryOptimizationGranted: status == pm.PermissionStatus.granted));
+  }
+
+  _requestBatteryOptimization(event, emit) async {
+    await pm.Permission.ignoreBatteryOptimizations.request();
+    add(const PermissionEvent.checkBatteryOptimizationPermission());
   }
 
   @override

@@ -19,15 +19,18 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) async {
-      getIt<PermissionBloc>().add(const PermissionEvent.checkLocationPermission());
-      await Future.delayed(const Duration(seconds: 2), () {
-        final locationState = getIt<PermissionBloc>().state.locationState;
-        if (locationState == LocationState.permissionGrantedServiceOn) {
-          context.go(LocationsView.route);
-        } else {
-          context.go(PermissionsView.route);
-        }
-      });
+      await Future.delayed(const Duration(milliseconds: 500));
+      final permissionBloc = getIt<PermissionBloc>();
+      permissionBloc.add(const PermissionEvent.checkLocationPermission());
+      permissionBloc.add(const PermissionEvent.checkBatteryOptimizationPermission());
+      await Future.delayed(const Duration(seconds: 1));
+      final locationState = permissionBloc.state.locationState;
+      final batteryOptimizationGranted = permissionBloc.state.batteryOptimizationGranted;
+      if (locationState == LocationState.permissionGrantedServiceOn && batteryOptimizationGranted) {
+        context.go(LocationsView.route);
+      } else {
+        context.go(PermissionsView.route);
+      }
     });
   }
 
