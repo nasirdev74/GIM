@@ -44,7 +44,7 @@ class LocationService : Service(), CoroutineScope {
     locationDao = LocationDatabase.getDatabase(this).locationDao()
     val powerManager = getSystemService(Context.POWER_SERVICE) as PowerManager
     wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "LocationService::lock")
-    wakeLock.acquire(10 * 60 * 1000L)
+    wakeLock.acquire(24 * 60 * 60 * 1000L)
 
     fetchLocation()
     scheduleLocationFetch()
