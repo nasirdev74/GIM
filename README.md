@@ -1,13 +1,12 @@
 # Live Demo:
-- [APK file](https://drive.google.com/file/d/1RZ-98IEJ8gOnj8RrrsgGmE4xKJZ1udYD/view?usp=sharing)
-- [Video preview](https://youtu.be/q18DrVq1WX8?si=vwwvNUXnxfT2e7K2)
+- [APK file](https://drive.google.com/file/d/1SAUaVoRGddixxRr_n9t476Ar3FLBZzW-/view?usp=sharing)
+- [Video preview](https://youtu.be/BtXdXFCBBRU?si=IQT4hPExY_qYqK8A)
 
 # Description of the project: 
-Its a simple flutter app that collects user location on 10 seconds interval. The project is developed following BLoC pattern. 
+This app captures user location every 10 seconds using a foreground service on Android. It keeps running even when the phone is asleep. Location data is stored using Room database, and the app is built using the BLoC pattern.
 
 # Instructions to get the project running locally: 
 - Install [Flutter](https://docs.flutter.dev)
 - Clone the public repository from [GIM](https://github.com/nasirdev74/GIM)
 - Setup Dart SDK
-- create a prod.env file 
 - run the main.dart file
