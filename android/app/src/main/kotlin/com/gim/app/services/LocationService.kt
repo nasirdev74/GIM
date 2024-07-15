@@ -129,6 +129,7 @@ class LocationService : Service(), CoroutineScope {
       NotificationCompat.Builder(this, notificationChannelId).setContentTitle("Location Service")
         .setSmallIcon(R.drawable.ic_notification).setPriority(NotificationCompat.PRIORITY_MAX)
         .setOngoing(true)
+        .setSound(null)
 
     location?.let {
       val currentTime = SimpleDateFormat("hh:mm:ss", Locale.getDefault()).format(Date())
